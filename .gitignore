@@ -1,8 +1,7 @@
 # Custom
 .transpiled
 .nyc_output
-.strings-content
-LocalStrs
+/local-test
 
 # Wercker
 .wercker
