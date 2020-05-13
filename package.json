@@ -1,0 +1,33 @@
+{
+  "name": "git-shallow",
+  "version": "1.0.0",
+  "description": "Download subdirectories from a git repo with as little network and disk overhead as possible",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "tap --node-arg=-r --node-arg=@babel/register tests/*.js",
+    "test-some": "tap --node-arg=-r --node-arg=@babel/register",
+    "cover": "nyc --reporter=lcov npm test",
+    "lint": "eslint .",
+    "build": "babel --source-maps inline src --out-dir build"
+  },
+  "bin": "build/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gas-buddy/git-shallow.git"
+  },
+  "keywords": [
+    "git",
+    "shallow",
+    "gasbuddy"
+  ],
+  "author": "GasBuddy",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/register": "^7.7.4",
+    "babel-preset-gasbuddy": "^6.0.0",
+    "eslint-config-gasbuddy": "^5.3.0",
+    "tap": "^14.10.4"
+  },
+  "dependencies": {}
+}
