@@ -18,7 +18,7 @@ export default function gitShallow({ repositoryUrl, branch = 'master', repositor
     git(workingDirectory, 'sparse-checkout', 'init', '--cone');
     git(workingDirectory, 'sparse-checkout', 'set', repositoryPath);
   }
-  git(workingDirectory, 'checkout', branch);
+  git(workingDirectory, '-c', 'advice.detachedHead=false', 'checkout', branch);
   git(workingDirectory, 'pull', 'origin', branch);
   const hash = git(workingDirectory, 'ls-tree', 'HEAD', repositoryPath);
   const match = hash.match(/^\S+\s+\S+\s+(\S+)\s*/);

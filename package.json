@@ -1,6 +1,6 @@
 {
   "name": "git-shallow",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Download subdirectories from a git repo with as little network and disk overhead as possible",
   "main": "build/index.js",
   "scripts": {
